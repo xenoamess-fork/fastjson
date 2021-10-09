@@ -1561,7 +1561,7 @@ public class JavaBeanDeserializer implements ObjectDeserializer {
                 for (int i = 0; i < params.length; i++) {
                     Object param = params[i];
                     if (param == null) {
-                        if (beanInfo.fields != null && i < beanInfo.fields.length) {
+                        if (i < beanInfo.fields.length) {
                             FieldInfo fieldInfo = beanInfo.fields[i];
                             if (fieldInfo.fieldClass == String.class) {
                                 hasNull = true;
@@ -1579,7 +1579,7 @@ public class JavaBeanDeserializer implements ObjectDeserializer {
 
                     for (int i = 0; i < params.length; i++) {
                         final Object param = params[i];
-                        if (param != null && beanInfo.fields != null && i < beanInfo.fields.length) {
+                        if (param != null && i < beanInfo.fields.length) {
                             FieldInfo fieldInfo = beanInfo.fields[i];
                             fieldInfo.set(object, param);
                         }

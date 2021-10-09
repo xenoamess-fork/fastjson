@@ -235,9 +235,7 @@ public final class RyuDouble {
                     int pow5Factor_mv;
                     {
                         long v = mv;
-                        if ((v % 5) != 0) {
-                            pow5Factor_mv = 0;
-                        } else if ((v % 25) != 0) {
+                        if ((v % 25) != 0) {
                             pow5Factor_mv = 1;
                         } else if ((v % 125) != 0) {
                             pow5Factor_mv = 2;

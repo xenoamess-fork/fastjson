@@ -197,9 +197,9 @@ public class FieldSerializer implements Comparable<FieldSerializer> {
                 serializeUsing = true;
             } else {
                 if (format != null) {
-                    if (runtimeFieldClass == double.class || runtimeFieldClass == Double.class) {
+                    if (runtimeFieldClass == Double.class) {
                         fieldSerializer = new DoubleSerializer(format);
-                    } else if (runtimeFieldClass == float.class || runtimeFieldClass == Float.class) {
+                    } else if (runtimeFieldClass == Float.class) {
                         fieldSerializer = new FloatCodec(format);
                     }
                 }

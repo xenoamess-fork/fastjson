@@ -1580,9 +1580,6 @@ public class TypeUtils {
                             java.sql.Timestamp.class
                     };
                     for (Class clazz : classes) {
-                        if (clazz == null) {
-                            continue;
-                        }
                         mappings.put(clazz.getName(), clazz);
                     }
                     return null;
@@ -3294,9 +3291,7 @@ public class TypeUtils {
                 return targetAnnotations;
             }
             mixInAnnotations = mixInMethod.getParameterAnnotations();
-            if (mixInAnnotations != null) {
-                return mixInAnnotations;
-            }
+            return mixInAnnotations;
         }
         return targetAnnotations;
     }
@@ -3344,9 +3339,7 @@ public class TypeUtils {
                 return targetAnnotations;
             }
             mixInAnnotations = mixInConstructor.getParameterAnnotations();
-            if (mixInAnnotations != null) {
-                return mixInAnnotations;
-            }
+            return mixInAnnotations;
         }
         return targetAnnotations;
     }

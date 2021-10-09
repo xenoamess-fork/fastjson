@@ -874,7 +874,7 @@ public class JSONPath implements JSONAware {
                 for (Map.Entry<String, Object> entry : fieldValues.entrySet()) {
                     String key = entry.getKey();
 
-                    if (key instanceof String) {
+                    if (key != null) {
                         String path = parent.equals("/") ?  "/" + key : parent + "/" + key;
                         paths(values, paths, path, entry.getValue(), config);
                     }
